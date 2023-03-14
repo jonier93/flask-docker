@@ -1,0 +1,40 @@
+
+.col {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+img {
+    height: 350px;
+}
+
+#fila {
+    margin-left: 1.5%;
+}
+
+#btnCuenta {
+    background-color: rgb(99, 41, 190);
+    color: white;
+    border-radius: 10px;
+    border: 1px;
+    position: relative;
+    left:90%;
+    margin-top: 1.5%;
+}
+
+#imgSesion{
+    height: 20px;
+}
+
+@media screen and (max-width:1000px) {
+    #btnCuenta{
+        left:85%;
+    }    
+}
+
+@media screen and (max-width:700px) {
+    #btnCuenta{
+        left:80%;
+    }     
+}
+

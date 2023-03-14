@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styleRegister.css">
+    <script src="{{url_for('static',filename='js/appRegister.js')}}" type="module"></script> <!-- Es necesario para cuando la URL se ha extendido o modificado -->
+    <title> Register </title>
+</head>
+<body>
+    <script src="//code.jquery.com/jquery.min.js"></script>    
+    <div id="navBarra"> </div>     
+    <script>
+        $(function() {
+            $("#navBarra").load("/html/barra.html");
+        });
+    </script>  
+    
+    <script>  
+        let confirmation = '{{message}}' 
+    </script>
+
+    {% if message == 1: %}
+        <script>
+            let nombre = '{{message1}}'    
+            let lastname = '{{message2}}'  
+            let identification = '{{message3}}'
+            let email = '{{message4}}'  
+            let password = '{{message5}}'           
+        </script>
+    {% endif %}
+
+    <div class="container-fluid"> 
+        <div class="row" style="height: 100vh;">
+            <div class="col-1"> </div>
+            <div class="col-3"></div>
+            <div class="col-4"> 
+                <div class="imagen">
+                    <img src="/photos/registro.png">
+                </div>  
+            {% if message == 1: %}
+                <form method="post" action="/actualizarRegistro">               
+            {% else: %}
+                <form method="post" action="/createUser">
+            {% endif %}
+                    <div class="mb-2">
+                        <label class="form-label"> Name </label>
+                        <input type="text" class="form-control" name="name" id="name_id">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label"> Last name </label>
+                        <input type="text" class="form-control" name="lastname" id="lastname_id">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label"> Cedula </label>
+                        <input type="number" class="form-control" name="identification" id="identification_id">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label"> Email address </label>
+                        <input type="email" class="form-control" name="email" id="email_id" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label"> Password </label>
+                        <input type="password" class="form-control" name="password" id="password_id">
+                    </div>                    
+                    <div class="mb-2 form-check">
+                        <div class="checkAcept">
+                            <input type="checkbox" class="form-check-input" id="Check">
+                            <label class="form-check-label"> Acepto los términos </label>
+                        </div>                        
+                    </div>
+                    <div class="buttonAcept">
+                        <button type="submit" class="btn btn-primary btn-lg" id="button">Submit</button>
+                    </div>                   
+                </form>   
+            </div>
+            <div class="col-3"></div>
+            <div class="col-1"> </div>
+        </div> 
+    </div>
+</body>
+</html>

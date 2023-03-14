@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/styleBillboard.css">
+    <script src="js/appBillboard.js" type="module"></script>
+    <title> Billboard </title>
+</head>
+<body>
+    <script src="//code.jquery.com/jquery.min.js"></script>    
+    <div id="navBarra"> </div>     
+    <script>
+        $(function() {
+            $("#navBarra").load("/html/barra.html");
+        });
+    </script>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1" style="background-color:rgb(44, 130, 161); ">
+            </div>
+            <div class="col-10" style="background-color:rgb(221, 217, 223);">
+                {% if message1 != 0 %} 
+                    <button type="submit" id="btnCuenta"> {{message1}} 
+                        <img src="photos/sesion.png" id="imgSesion"></img> 
+                    </button>  
+                    <script> correo = '{{message3}}' </script>              
+                {% endif %}
+                <div class="row" id="fila" >
+                    <div class="col">
+                        <div class="card" style="width: 16rem;">
+                            <img src="photos/avengers.jpg" class="card-img-top">
+                            <div class="card-body">
+                              <h5 class="card-title" style="text-align:center;"> Avengers </h5>
+                              <p class="card-text" style="text-align:center;"> Avengers Endgame Marvel Studios</p>
+                              <div style="text-align: center;"> <a href="https://bit.ly/3Ul7DRS" class="btn btn-primary">Reservar</a> </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 16rem;">
+                            <img src="photos/caballeros.jpg" class="card-img-top">
+                            <div class="card-body">
+                              <h5 class="card-title" style="text-align:center;"> Caballeros del zodiaco </h5>
+                              <p class="card-text" style="text-align:center;"> Los caballeros del zodiaco: la leyenda del santuario </p>
+                              <div style="text-align: center;"> <a href="https://bit.ly/3Ul7DRS" class="btn btn-primary">Reservar</a> </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 16rem;">
+                            <img src="photos/escarlata.jpg" class="card-img-top">
+                            <div class="card-body">
+                              <h5 class="card-title" style="text-align:center;"> La Cumbre Escarlata </h5>
+                              <p class="card-text" style="text-align:center;"> Del aclamado director guillermo del toro </p>
+                              <div style="text-align: center;"> <a href="https://bit.ly/3Ul7DRS" class="btn btn-primary">Reservar</a> </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 16rem;">
+                            <img src="photos/jhon_wick.jpg" class="card-img-top">
+                            <div class="card-body">
+                              <h5 class="card-title" style="text-align:center;"> Jhon Wick </h5>
+                              <p class="card-text" style="text-align:center;"> Keanu Reeves Jhon Wick Parabellum </p>
+                              <div style="text-align: center;"> <a href="https://bit.ly/3Ul7DRS" class="btn btn-primary">Reservar</a> </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="row" id="fila">
+                    <div class="col">
+                        <div class="card" style="width: 16rem;">
+                            <img src="photos/pesadilla.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title" style="text-align:center;"> Pesadilla en el infierno </h5>
+                                <p class="card-text" style="text-align:center;"> Tengo miedo de cerrar los ojos, tngo miedo de abrirlos  </p>
+                                <div style="text-align: center;"> <a href="https://bit.ly/3Ul7DRS" class="btn btn-primary">Reservar</a> </div>
+                            </div>
+                        </div> 
+                    </div>                    
+                    <div class="col">
+                        <div class="card" style="width: 16rem;">
+                            <img src="photos/revenge.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title" style="text-align:center;"> Revenge </h5>
+                                <p class="card-text" style="text-align:center;"> Matilda Lutz, Kevin Janssen, Vicent Colombe  </p>
+                                <div style="text-align: center;"> <a href="https://bit.ly/3Ul7DRS" class="btn btn-primary">Reservar</a> </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 16rem;">
+                            <img src="photos/rey_leon.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title" style="text-align:center;"> El Rey leon </h5>
+                                <p class="card-text" style="text-align:center;"> Donal Glover, Seth Rogen, Chiwetel Ejiofor </p>
+                                <div style="text-align: center;"> <a href="https://bit.ly/3Ul7DRS" class="btn btn-primary">Reservar</a> </div>
+                            </div>
+                        </div> 
+                    </div>                    
+                    <div class="col">
+                        <div class="card" style="width: 16rem;">
+                            <img src="photos/toy_story.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title" style="text-align:center;"> Toy Story 4 </h5>
+                                <p class="card-text" style="text-align:center;"> Disney Pixar Toy Story 4 June 2019 </p>
+                                <div style="text-align: center;"> <a href="https://bit.ly/3Ul7DRS" class="btn btn-primary">Reservar</a> </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>                               
+            </div>
+            <div class="col-1 " style="background-color:rgb(25, 142, 185); ">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

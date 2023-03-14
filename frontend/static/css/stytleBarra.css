@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+#barraUl {
+    list-style: none;
+    text-align: center;
+    margin: 0%;
+}
+
+.barraIl {
+    display: inline-block; 
+    padding-right: 2%;
+}
+
+nav {
+    background-color: black;   
+    margin: 0 auto;
+}
+
+.barraButton{
+    background-color: black;
+    color: aliceblue;
+    font-size: 30px;
+    padding: 7%;
+    border: 0px;
+}
+
+.barraButton:hover {
+    background-color:aqua;    
+}
