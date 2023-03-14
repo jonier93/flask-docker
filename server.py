@@ -15,6 +15,6 @@ from routes.rutas import * #Debe ir después de declarar app, ya que app es usad
 if __name__ == '__main__':
     """dotenv_path = Path("local-setting.env")
     load_dotenv(dotenv_path)"""
-    port = int(os.environ.get('PORT', AppSettings.PORT_DEPLOY))
+    port =  AppSettings.PORT_DEPLOY
     host = os.environ.get('SERVER_HOST', '0.0.0.0')
     app.run(host, port)
