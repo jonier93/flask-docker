@@ -1,4 +1,4 @@
 import os
 
 class AppSettings:
-    PORT = os.getenv("PORT")
+    PORT_DEPLOY = os.getenv("PORT_DEPLOY")
