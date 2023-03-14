@@ -11,5 +11,5 @@ app = Flask(__name__, static_url_path='', static_folder=static_path, template_fo
 from routes.rutas import * #Debe ir después de declarar app, ya que app es usado en este módulo que se está importando
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 3000))
+    port = int(os.environ.get('PORT', 8080))
     app.run(debug=True, host='0.0.0.0', port=port)
