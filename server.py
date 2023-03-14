@@ -3,7 +3,7 @@ import baseDatos
 import os
 from pathlib import Path
 from settings import AppSettings
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 static_path = os.path.join(os.getcwd(), 'frontend/static').replace('\\', '/')
 template_path = os.path.join(os.getcwd(), 'frontend/templates').replace('\\', '/')
